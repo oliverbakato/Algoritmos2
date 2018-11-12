@@ -8,22 +8,19 @@ public class Trabalho2 {
 		int numConta;
 		float saldo;
 	}
-		
-	public static void criarVetor(){
-		int n = Integer.parseInt(JOptionPane.showInputDialog("Informe o numero de contas a serem cadastradas: "));
-		Conta vetorContas[] = new Conta[n];
-		
-        for(int i=0; i<n; i++){
-            vetorContas[i].titular = JOptionPane.showInputDialog(null, "Nome do titular: ");
-            
-            vetorContas[i].numConta = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o numero da conta: "));
-            
-            vetorContas[i].saldo = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o saldo inicial da conta: "));
-        }
-    }
+	int tam = 0;
+	Conta vetorContas[] = new Conta[n];
+	
+	public static void criaConta(nome, num){
+		tam ++;
+		Conta nova = new Conta();
+		nova.titlar = nome;
+		nova.numConta = num;
+    	}
 	
 	public static void main (String[] args) {
-		criarVetor();
-		
+		String nome = "Oliver";
+		int num = 1;
+		criaConta(nome, num);
 	}
 }
